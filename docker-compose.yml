@@ -1,0 +1,33 @@
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: ai_consultant_redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  bot:
+    build: .
+    container_name: ai_consultant_bot
+    command: python -m bot.main
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+      - worker
+    restart: always
+
+  worker:
+    build: .
+    container_name: ai_consultant_worker
+    command: celery -A worker.tasks.app worker --loglevel=info -P threads
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    restart: always

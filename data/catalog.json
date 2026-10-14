@@ -1,0 +1,18 @@
+[
+  {
+    "sku": "XIAOMI-VAC-G10",
+    "name": "Беспроводной пылесос Xiaomi Vacuum Cleaner G10",
+    "price": 18990,
+    "warranty_months": 12,
+    "category": "Пылесосы",
+    "description": "Мощность всасывания 150 Вт. Цветной TFT-дисплей. Съемный аккумулятор до 65 минут работы."
+  },
+  {
+    "sku": "MACBOOK-AIR-M2",
+    "name": "Ноутбук Apple MacBook Air 13 M2 256GB",
+    "price": 109990,
+    "warranty_months": 24,
+    "category": "Ноутбуки",
+    "description": "Чип Apple M2, 8 ГБ объединенной памяти, SSD 256 ГБ. Дисплей Liquid Retina 13.6 дюйма."
+  }
+]
